@@ -14,7 +14,7 @@ class Spark:
         if direction == -1:
             self.distance = distance
     def update(self, dt):
-        var = self.position.xy 
+        var = self.position.xy
         if self.isMoving:
             self.position.xy = (self.position.x + self.direction*self.speed*dt, self.position.y)
             self.distance += self.direction*self.speed*dt

@@ -242,28 +242,28 @@ def main():
         pygame.display.flip()
 
 def loadLevel(level):
-    if level ==0: #first level
+    if level == 0: #first level
         birds.append(Bird(320 - 31/2, 150 - 58, False, 0, 0, 0))
         birds.append(Bird(320 - 31/2, 150 - 58 + 100, False, 0, 0, 0))
         powerlines.append(Powerline(30, 150, 610, 150))
         powerlines.append(Powerline(30, 250, 610, 250))
-    if level ==1: #moving bird + normal bird
+    if level == 1: #moving bird + normal bird
         birds.append(Bird(320 - 31/2 + 150, 250 - 58, False, 0, 0, 0))
         birds.append(Bird(320 - 31/2 - 200, 150 - 58, True, 400, 1, 70))
         powerlines.append(Powerline(30, 150, 610, 150))
         powerlines.append(Powerline(30, 250, 610, 250))
-    if level ==2: #two moving birds
+    if level == 2: #two moving birds
         birds.append(Bird(320 - 31/2 - 100, 100 - 58, True, 200, 1, 70))
         birds.append(Bird(320 - 31/2 + 100, 100 - 58 + 150, True, 200, -1, 70))
         powerlines.append(Powerline(30, 100, 610, 100))
         powerlines.append(Powerline(30, 250, 610, 250))
-    if level ==3: #level that introduces boxes
+    if level == 3: #level that introduces boxes
         birds.append(Bird(320 - 31/2 - 100, 100 - 58, False, 0, 0, 0))
         birds.append(Bird(320 - 31/2 + 100, 100 - 58 + 150, False, 0, 0, 0))
         boxes.append(Box(320 - 64/2 + 100, 100 - 32))
         powerlines.append(Powerline(30, 100, 610, 100))
         powerlines.append(Powerline(30, 250, 610, 250))
-    if level ==4: #boxes + moving birds
+    if level == 4: #boxes + moving birds
         birds.append(Bird(320 - 31/2 - 250, 200 - 58, True, 100, 1, 70))
         birds.append(Bird(320 - 31/2 - 150, 300 - 58, True, 100, -1, 70))
         boxes.append(Box(320 - 64/2 - 200, 100 - 32))
@@ -278,18 +278,18 @@ def loadLevel(level):
         powerlines.append(Powerline(30, 100, 610, 100))
         powerlines.append(Powerline(30, 200, 610, 200))
         powerlines.append(Powerline(30, 300, 610, 300))
-    if level ==5: #intro to sparks
+    if level == 5: #intro to sparks
         birds.append(Bird(320 - 31/2, 150 - 58, False, 0, 0, 0))
         sparks.append(Spark(320 - 14 - 50, 250 - 14, True, 114, 1, 50))
         powerlines.append(Powerline(30, 150, 610, 150))
         powerlines.append(Powerline(30, 250, 610, 250))
-    if level ==6: #2 sparks + moving bird
+    if level == 6: #2 sparks + moving bird
         birds.append(Bird(320 - 31/2 - 50, 150 - 58, True, 114, 1, 50))
         sparks.append(Spark(320 - 14 - 28 - 50, 250 - 14, True, 114, 1, 50))
         sparks.append(Spark(320 - 14, 250 - 14, True, 114, 1, 50))
         powerlines.append(Powerline(30, 150, 610, 150))
         powerlines.append(Powerline(30, 250, 610, 250))
-    if level ==7: #sparks + box
+    if level == 7: #sparks + box
         birds.append(Bird(320 - 31/2 - 250, 275 - 58, True, 320 + 157, 1, 90))
         sparks.append(Spark(320 - 21 - 250, 300 - 14, True, 320 + 157, 1, 90))
         sparks.append(Spark(320 - 21 - 250 + 28, 300 - 14, True, 320 + 157, 1, 90))
@@ -300,7 +300,7 @@ def loadLevel(level):
         powerlines.append(Powerline(30, 100, 610, 100))
         powerlines.append(Powerline(30, 275, 610, 275))
         powerlines.append(Powerline(30, 300, 610, 300))
-    if level ==8: #final level
+    if level == 8: #final level
         birds.append(Bird(320 - 31/2 - 175, 200 - 58, False, 0, 0, 0))
         birds.append(Bird(320 - 31/2 - 87.5, 200 - 58, False, 0, 0, 0))
         birds.append(Bird(320 - 31/2, 100 - 58, False, 0, 0, 0))
@@ -328,7 +328,7 @@ def loadLevel(level):
         powerlines.append(Powerline(30, 100, 610, 100))
         powerlines.append(Powerline(30, 200, 610, 200))
         powerlines.append(Powerline(30, 300, 610, 300))
-    if level ==9: # fun final level
+    if level == 9: # fun final level
         birds.append(Bird(320 - 31/2 + 100, 225 - 58, True, 400, -1, 25))
         birds.append(Bird(320 - 31/2 - 100, 300 - 58, True, 400, 1, 25))
         birds.append(Bird(320 - 31/2 + 200, 75 - 58, True, 400, -1, 50))

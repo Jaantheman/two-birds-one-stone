@@ -127,10 +127,10 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
             if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-                if shooter.hasBullet:
+                if shooter.hasBullet > 0:
                     pygame.mixer.Sound.play(launchfx)
                     shots += 1
-                    shooter.hasBullet = False
+                    shooter.hasBullet -= 1
                     projectiles.append(Projectile(shooter.position.x + shooter.width/2 - 29/2, shooter.position.y + 8))
 
         # update
@@ -223,10 +223,14 @@ def main():
         if not (currentLevel > 9):
 
             display.blit(shotsTextBorder, (5, 475 - 39))
+            display.blit(shotsTextBorder, (640 - 300 - 5, 475 - 39))
             display.blit(levelTextBorder, (640 - 144 - 5, 475 - 39))
         
             levelText = font_28.render('LEVEL: ' + str(currentLevel + 1) + '/10', True, (0, 0, 0))
             display.blit(levelText, (640 - 144 + 5, 475 - 39 + 4))
+
+            munition = font_28.render('MUNITION: ' + str(shooter.hasBullet), True, (0, 0, 0))
+            display.blit(munition, (640 - 300 + 5, 475 - 39 + 4))
 
             shotsText = font_28.render('SHOTS: ' + str(shots).zfill(3), True, (0, 0, 0))
             display.blit(shotsText, (15, 475 - 39 + 4))

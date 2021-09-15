@@ -5,7 +5,7 @@ class Shooter:
     width = 70
     height = 67
     direction = 0
-    hasBullet = True
+    hasBullet = 2
     def __init__(self):
         self.position.xy = 320 - self.width/2, 400
     def setDirection(self, direction):
@@ -20,5 +20,5 @@ class Shooter:
         if (not(self.position.x < 0 and self.direction == -1) and not(self.position.x + self.width > 640 and self.direction == 1)):
             self.position.xy = (self.position.x + self.direction*120*dt, self.position.y) 
     def reset(self):
-        self.hasBullet = True
+        self.hasBullet = 2
         self.position.xy = 320 - self.width/2, 400
